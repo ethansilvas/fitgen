@@ -24,11 +24,13 @@ after the previous merges there still may be duplicate exercises for the same da
 """
 
 # remove duplicate exercise rows by using the average value for the Reps column
-workout_df = workout_df.groupby(['Date', 'Exercise', 'Weight', 'Duration(s)', 'isWarmup'])['Reps'].mean().reset_index(name='Reps')
-workout_df['Reps'] = np.ceil(workout_df['Reps'])
+workout_df = workout_df.groupby(['Date', 'Exercise', 'Sets', 'Weight', 'Duration(s)', 'isWarmup'])['Reps'].mean().reset_index(name='Reps')
+workout_df['Reps'] = np.ceil(workout_df['Reps']).astype(int)
 
 # remove duplicate exercise rows by using the lowest weight value 
-# workout_df = workout_df.groupby(['Date', 'Exercise', 'Reps', 'Duration(s)', 'isWarmup'])['Weight'].min().reset_index(name='Weight')
+workout_df = workout_df.groupby(['Date', 'Exercise', 'Sets', 'Reps', 'Duration(s)', 'isWarmup'])['Weight'].min().reset_index(name='Weight')
+
+# print(workout_df[(workout_df)])
 
 workout_df.set_index('Date', inplace=True)
 workout_df.sort_index(ascending=False, inplace=True)
