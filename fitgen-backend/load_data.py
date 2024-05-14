@@ -35,4 +35,4 @@ workout_df['Target Muscle'] = workout_df['Exercise'].map(exercises)
 
 workout_df.set_index('Date', inplace=True)
 workout_df.sort_index(ascending=False, inplace=True)
-workout_df.to_csv('test.csv')
+workout_df.to_csv('data/workout_data.csv')

@@ -37,21 +37,38 @@ Abs
 
 def choose_legs_back(base_workout):
     """Uses randint to choose between (quads or hamstrings) and (back or lower back)"""
+
     legs = randint(0, 1)
     back = randint(0, 1)
 
-    base_workout.append('Quadriceps') if legs == 0 else base_workout.append('Hamstrings')
-    base_workout.append('Back') if back == 0 else base_workout.append('Lower Back')
+    if legs == 0:
+        base_workout[2] = 'Quadriceps'
+    else:
+        base_workout[2] = 'Hamstrings'
+
+    if back == 0:
+        base_workout[7] = 'Back' 
+    else:
+        base_workout[7] = 'Lower Back'
+
+def get_exercise(target_muscle):
+    """Use data to generate exercise, sets, and reps given a target muscle"""
+
+    # choose a random exercise from the list of exercises for the given target muscle
+    exercise_index = randint(0, len(target_muscles[target_muscle]) - 1)
+
+    print(target_muscles[target_muscle][exercise_index])
+
 
 @app.get('/api/generate')
 def generate_workout():
-    base_workout = ['Shoulders', 'Triceps', 'Biceps', 'Chest', 'Glutes', 'Abs']
-
+    base_workout = ['Shoulders', 'Triceps', 'Quadriceps or Hamstrings', 'Biceps', 'Chest', 'Glutes', 'Abs', 'Back or Lower Back']
     choose_legs_back(base_workout)
 
     workout = {}
     
     for exercise in base_workout:
+        get_exercise(exercise)
         workout[exercise] = []
 
     return jsonify(workout) 
