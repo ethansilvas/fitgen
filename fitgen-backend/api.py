@@ -2,6 +2,7 @@ from random import randint
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+import pandas as pd
 
 from data.exercise_dictionaries import target_muscles
 
@@ -35,6 +36,8 @@ Abs
 (Back or lower back)
 """
 
+workout_df = pd.read_csv('./data/workout_data.csv', parse_dates=True)
+
 def choose_legs_back(base_workout):
     """Uses randint to choose between (quads or hamstrings) and (back or lower back)"""
 
@@ -57,8 +60,14 @@ def get_exercise(target_muscle):
     # choose a random exercise from the list of exercises for the given target muscle
     exercise_index = randint(0, len(target_muscles[target_muscle]) - 1)
 
-    print(target_muscles[target_muscle][exercise_index])
+    exercise_data = workout_df[workout_df['Exercise'] == target_muscles[target_muscle][exercise_index]]
 
+    return {
+        'Exercise': target_muscles[target_muscle][exercise_index], 
+        'Reps': round(exercise_data['Reps'].mean()), 
+        'Sets': int(exercise_data['Sets'].mean()),
+        'Weight': round(exercise_data['Weight'].mean() / 5) * 5
+    }
 
 @app.get('/api/generate')
 def generate_workout():
@@ -68,8 +77,7 @@ def generate_workout():
     workout = {}
     
     for exercise in base_workout:
-        get_exercise(exercise)
-        workout[exercise] = []
+        workout[exercise] = get_exercise(exercise)
 
     return jsonify(workout) 
 
