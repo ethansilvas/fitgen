@@ -5,36 +5,36 @@ exercise_target_muscle = {
     'Seated Tricep Press': 'Triceps',
     'Tricep Push Up': 'Chest',
     'Abs Bike': 'Abs',
-    'Burpee': 'Quadriceps'
-    Dumbbell Bent Over Row
-    Dumbbell Bulgarian Split Squat
-    Dumbbell Floor Press
-    Dumbbell Row
-    Hand Release Push Up
-    Dumbbell Tricep Extension
-    Hip Thrust
-    Reverse Dumbbell Curl
-    Seated Dumbbell Curl
-    Superman with Scaption
-    Air Squats
-    Dumbbell Clean
-    Dumbbell Front Raise
-    Dumbbell Shoulder Raise
-    Dumbbell Stiff Legged Deadlift
-    Single Leg Romanian Deadlift
-    Sit Up
-    Bench Dip
-    Decline Push Up
-    Dumbbell Kickbacks
-    Oblique Crunch
-    Push Up
-    Dumbbell Bicep Curl
-    Dumbbell Lunge
-    Frog Pump
-    Jump Squat
-    Russian Twist
-    Bird Dog
-    Dumbbell Snatch
+    'Burpee': 'Quadriceps',
+    'Dumbbell Bent Over Row': 'Back',
+    'Dumbbell Bulgarian Split Squat': 'Quadriceps',
+    'Dumbbell Floor Press': 'Chest',
+    'Dumbbell Row': 'Back',
+    'Hand Release Push Up': 'Chest',
+    'Dumbbell Tricep Extension': 'Triceps',
+    'Hip Thrust': 'Glutes',
+    'Reverse Dumbbell Curl': 'Biceps',
+    'Seated Dumbbell Curl': 'Biceps',
+    'Superman with Scaption': 'Lower Back',
+    'Air Squats': 'Quadriceps',
+    'Dumbbell Clean': 'Hamstrings',
+    'Dumbbell Front Raise': 'Shoulders',
+    'Dumbbell Shoulder Raise': 'Shoulders', 
+    'Dumbbell Stiff Legged Deadlift': 'Hamstrings',
+    'Single Leg Romanian Deadlift': 'Hamstrings',
+    'Sit Up': 'Abs',
+    'Bench Dip': 'Triceps',
+    'Decline Push Up': 'Chest',
+    'Dumbbell Kickbacks': 'Triceps',
+    'Oblique Crunch': 'Abs',
+    'Push Up': 'Chest',
+    'Dumbbell Bicep Curl': 'Biceps',
+    'Dumbbell Lunge': 'Quadriceps',
+    'Frog Pump': 'Glutes',
+    'Jump Squat': 'Quadriceps',
+    'Russian Twist': 'Abs',
+    'Bird Dog': 'Abs',
+    'Dumbbell Snatch': 'Hamstrings',
     Incline Push Up
     Standing Dumbbell Shoulder Press
     Crunches
