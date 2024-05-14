@@ -35,27 +35,26 @@ exercise_target_muscle = {
     'Russian Twist': 'Abs',
     'Bird Dog': 'Abs',
     'Dumbbell Snatch': 'Hamstrings',
-    Incline Push Up
-    Standing Dumbbell Shoulder Press
-    Crunches
-    Dumbbell Bent Over Reverse Fly
-    Hammer Curls
-    Lunge Jump
-    Arnold Dumbbell Press
-    Diamond Push Up
-    Dumbbell Rear Delt Raise
-    Iron Cross
-    Single Arm Dumbbell Tricep Extension
-    Single Leg Glute Bridge
-    Bird Dog Rows
-    Dumbbell Drag Pause Curl
-    Dumbbell Romanian Deadlift
-    Pistol Squat
-    Dumbbell Drag Curl
-    Dumbbell Pause Curl
-    Dumbbell Squeeze Press
-    Renegade Row
-    Dumbbell Shoulder Press
+    'Incline Push Up': 'Chest',
+    'Standing Dumbbell Shoulder Press': 'Shoulders',
+    'Crunches': 'Abs',
+    'Dumbbell Bent Over Reverse Fly': 'Back',
+    'Hammer Curls': 'Biceps',
+    'Lunge Jump': 'Quadriceps',
+    'Arnold Dumbbell Press': 'Shoulders',
+    'Diamond Push Up': 'Triceps',
+    'Dumbbell Rear Delt Raise': 'Shoulders',
+    'Iron Cross': 'Shoulders',
+    'Single Arm Dumbbell Tricep Extension': 'Triceps',
+    'Single Leg Glute Bridge': 'Glutes',
+    'Bird Dog Rows': 'Back',
+    'Dumbbell Drag Pause Curl': 'Biceps',
+    'Dumbbell Romanian Deadlift': 'Hamstrings',
+    'Pistol Squat': 'Quadriceps',
+    'Dumbbell Drag Curl': 'Biceps',
+    'Dumbbell Pause Curl': 'Biceps',
+    'Dumbbell Squeeze Press': 'Chest',
+    'Dumbbell Shoulder Press': 'Shoulders',
     Side Laterals to Front Raise
     Single Leg Kickback
     Standing Dumbbell Tricep Extension
