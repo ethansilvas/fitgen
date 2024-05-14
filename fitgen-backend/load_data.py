@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from data.exercise_target_muscle import exercise_target_muscle
+from data.exercise_dictionaries import exercises
 
 workout_df = pd.read_csv('./data/WorkoutExport.csv', parse_dates=True)
 
@@ -31,7 +31,7 @@ workout_df['Reps'] = np.ceil(workout_df['Reps']).astype(int)
 workout_df['Weight'] = workout_df['Weight'].astype(int)
 
 # add the target muscle column 
-workout_df['Target Muscle'] = workout_df['Exercise'].map(exercise_target_muscle)
+workout_df['Target Muscle'] = workout_df['Exercise'].map(exercises)
 
 workout_df.set_index('Date', inplace=True)
 workout_df.sort_index(ascending=False, inplace=True)

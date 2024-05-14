@@ -1,4 +1,4 @@
-exercise_target_muscle = {
+exercises = {
     'Concentration Curl': 'Biceps',
     'Lunge': 'Quadriceps',
     'Plank': 'Abs',
@@ -85,4 +85,17 @@ exercise_target_muscle = {
     'Single Arm Floor Press': 'Chest',
     'Walking Lunge': 'Quadriceps',
     'Single Arm Reverse Dumbbell Curl': 'Biceps'
+}
+
+target_muscles = {
+    'Biceps': ['Concentration Curl', 'Reverse Dumbbell Curl', 'Seated Dumbbell Curl', 'Dumbbell Bicep Curl', 'Hammer Curls', 'Dumbbell Drag Pause Curl', 'Dumbbell Drag Curl', 'Dumbbell Pause Curl', 'Dumbbell Hammer Pause Curl', 'Waiter Curls', 'Dumbbell Standing Hammer Curl To Front Press', 'Cross Body Hammer Curls', 'Dumbbell Curl', 'Biceps Curl To Shoulder Press', 'Single Arm Reverse Dumbbell Curl'], 
+    'Quadriceps': ['Lunge', 'Burpee', 'Dumbbell Bulgarian Split Squat', 'Air Squats', 'Dumbbell Lunge', 'Jump Squat', 'Lunge Jump', 'Pistol Squat', 'Alternating Lunge Jumps', 'Dumbbell Squat', 'Dumbbell Squat To Shoulder Press', 'Double Dumbbell Power Snatch', 'Dumbbell Sumo Squat', 'Mountain Climber', 'Walking Lunge'], 
+    'Abs': ['Plank', 'Abs Bike', 'Sit Up', 'Oblique Crunch', 'Russian Twist', 'Bird Dog', 'Crunches', 'Bicycle Crunch', 'Leg Raise'], 
+    'Triceps': ['Seated Tricep Press', 'Dumbbell Tricep Extension', 'Bench Dip', 'Dumbbell Kickbacks', 'Diamond Push Up', 'Single Arm Dumbbell Tricep Extension', 'Standing Dumbbell Tricep Extension'], 
+    'Chest': ['Tricep Push Up', 'Dumbbell Floor Press', 'Hand Release Push Up', 'Decline Push Up', 'Push Up', 'Incline Push Up', 'Dumbbell Squeeze Press', 'Single Arm Floor Press'], 
+    'Back': ['Dumbbell Bent Over Row', 'Dumbbell Row', 'Dumbbell Bent Over Reverse Fly', 'Bird Dog Rows'], 
+    'Glutes': ['Hip Thrust', 'Frog Pump', 'Single Leg Glute Bridge', 'Single Leg Kickback', 'Standing Leg Side Hold', 'Straight Leg Kickback'], 
+    'Lower Back': ['Superman with Scaption', 'Superman', 'Cat Cow'], 
+    'Hamstrings': ['Dumbbell Clean', 'Dumbbell Stiff Legged Deadlift', 'Single Leg Romanian Deadlift', 'Dumbbell Snatch', 'Dumbbell Romanian Deadlift', 'Bear Crawl', 'Dumbbell Good Morning', 'Tuck Jump', 'Dumbbell Hang Snatch', 'Dumbbell Romanian Deadlift to Bent Over Row'], 
+    'Shoulders': ['Dumbbell Front Raise', 'Dumbbell Shoulder Raise', 'Standing Dumbbell Shoulder Press', 'Arnold Dumbbell Press', 'Dumbbell Rear Delt Raise', 'Iron Cross', 'Dumbbell Shoulder Press', 'Side Laterals to Front Raise', 'Seated Dumbbell Rear Delt Raise']
 }
