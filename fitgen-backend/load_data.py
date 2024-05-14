@@ -29,6 +29,10 @@ workout_df = workout_df.groupby(['Date', 'Exercise', 'Duration(s)', 'isWarmup'])
 workout_df['Reps'] = np.ceil(workout_df['Reps']).astype(int)
 workout_df['Weight'] = workout_df['Weight'].astype(int)
 
+test = workout_df['Exercise'].unique()
+for ex in test: 
+    print(ex)
+
 workout_df.set_index('Date', inplace=True)
 workout_df.sort_index(ascending=False, inplace=True)
 workout_df.to_csv('test.csv')
