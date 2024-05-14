@@ -55,34 +55,34 @@ exercise_target_muscle = {
     'Dumbbell Pause Curl': 'Biceps',
     'Dumbbell Squeeze Press': 'Chest',
     'Dumbbell Shoulder Press': 'Shoulders',
-    Side Laterals to Front Raise
-    Single Leg Kickback
-    Standing Dumbbell Tricep Extension
-    Bear Crawl
-    Dumbbell Hammer Pause Curl
-    Waiter Curls
-    Standing Leg Side Hold
-    Dumbbell Good Morning
-    Dumbbell Standing Hammer Curl To Front Press
-    Seated Dumbbell Rear Delt Raise
-    Alternating Lunge Jumps
-    Bicycle Crunch
-    Cross Body Hammer Curls
-    Dumbbell Squat
-    Tuck Jump
-    Dumbbell Curl
-    Dumbbell Squat To Shoulder Press
-    Leg Raise
-    Biceps Curl To Shoulder Press
-    Dumbbell Hang Snatch
-    Superman
-    Double Dumbbell Power Snatch
-    Dumbbell Romanian Deadlift to Bent Over Row
-    Straight Leg Kickback
-    Cat Cow
-    Dumbbell Sumo Squat
-    Mountain Climber
-    Single Arm Floor Press
-    Walking Lunge
-    Single Arm Reverse Dumbbell Curl
+    'Side Laterals to Front Raise': 'Shoulders',
+    'Single Leg Kickback': 'Glutes',
+    'Standing Dumbbell Tricep Extension': 'Triceps',
+    'Bear Crawl': 'Hamstrings',
+    'Dumbbell Hammer Pause Curl': 'Biceps',
+    'Waiter Curls': 'Biceps',
+    'Standing Leg Side Hold': 'Glutes',
+    'Dumbbell Good Morning': 'Hamstrings',
+    'Dumbbell Standing Hammer Curl To Front Press': 'Biceps',
+    'Seated Dumbbell Rear Delt Raise': 'Shoulders',
+    'Alternating Lunge Jumps': 'Quadriceps',
+    'Bicycle Crunch': 'Abs',
+    'Cross Body Hammer Curls': 'Biceps',
+    'Dumbbell Squat': 'Quadriceps',
+    'Tuck Jump': 'Hamstrings',
+    'Dumbbell Curl': 'Biceps',
+    'Dumbbell Squat To Shoulder Press': 'Quadriceps',
+    'Leg Raise': 'Abs',
+    'Biceps Curl To Shoulder Press': 'Biceps',
+    'Dumbbell Hang Snatch': 'Hamstrings',
+    'Superman': 'Lower Back',
+    'Double Dumbbell Power Snatch': 'Quadriceps',
+    'Dumbbell Romanian Deadlift to Bent Over Row': 'Hamstrings',
+    'Straight Leg Kickback': 'Glutes',
+    'Cat Cow': 'Lower Back',
+    'Dumbbell Sumo Squat': 'Quadriceps',
+    'Mountain Climber': 'Quadriceps',
+    'Single Arm Floor Press': 'Chest',
+    'Walking Lunge': 'Quadriceps',
+    'Single Arm Reverse Dumbbell Curl': 'Biceps'
 }
