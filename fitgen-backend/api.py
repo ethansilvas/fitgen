@@ -81,6 +81,10 @@ def generate_workout():
 
     return jsonify(workout) 
 
+@app.get('/api/targetmuscles')
+def get_target_muscles():
+    return jsonify(target_muscles)
+
 if __name__ == '__main__':
     # default port 5000 will result in CORS issue
     app.run(debug=True, port=8080)

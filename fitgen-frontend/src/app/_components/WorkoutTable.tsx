@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from "react";
+import TargetMuscle from "./TargetMuscle";
 
 type Exercise = {
     Exercise: string,
@@ -33,6 +34,7 @@ export default function WorkoutTable() {
         });
     }, []);
 
+
     if (isLoading) {
         return (
             <div>Loading...</div>
@@ -55,12 +57,15 @@ export default function WorkoutTable() {
                         {
                             Object.entries(workout).map(([targetMuscle, exercise]) => (
                                 <tr key={targetMuscle}>
-                                    <td>{targetMuscle}</td>
+                                    <td>
+                                        <TargetMuscle defaultMuscle={targetMuscle}></TargetMuscle>
+                                    </td>
                                     <td>
                                         <select
-                                            value={exercise.Exercise}
+                                            defaultValue={exercise.Exercise}
                                         >
                                             <option value={exercise.Exercise}>{exercise.Exercise}</option>
+                                            <option value={'test'}>Test</option>
                                         </select>
                                     </td>
                                     <td>{exercise.Weight}</td>
