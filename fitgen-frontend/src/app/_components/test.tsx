@@ -1,10 +1,18 @@
 'use client'
 import React, { useEffect, useState } from "react";
 
+type Exercise = {
+    Exercise: string,
+}
+
+type Workout = {
+    Abs: Exercise
+}
+
 
 export default function Test() {
     // const [isLoading, setLoading] = useState(true)
-    const [workout, setWorkout] = useState({})
+    const [workout, setWorkout] = useState<Workout>({ Abs: { Exercise: 'Crunches' } })
 
     useEffect(() => {
         fetch('http://localhost:8080/api/generate').then(
@@ -22,7 +30,7 @@ export default function Test() {
     } else {
         console.log(workout)
         return (
-            <div>Data Loaded</div>
+            <div>{workout.Abs.Exercise}</div>
         )
     }
 }
