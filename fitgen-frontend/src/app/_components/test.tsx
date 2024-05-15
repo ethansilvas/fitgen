@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 
 type Exercise = {
     Exercise: string,
+    Reps: number,
+    Weight: number
 }
 
 type Workout = {
@@ -11,26 +13,26 @@ type Workout = {
 
 
 export default function Test() {
-    // const [isLoading, setLoading] = useState(true)
-    const [workout, setWorkout] = useState<Workout>({ Abs: { Exercise: 'Crunches' } })
+    const [isLoading, setLoading] = useState(true)
+    const [workout, setWorkout] = useState<Workout | null>(null)
 
     useEffect(() => {
         fetch('http://localhost:8080/api/generate').then(
             response => response.json()
         ).then((data) => {
             setWorkout(data);
-            //setLoading(false);
+            setLoading(false);
         });
     }, []);
 
-    if (Object.keys(workout).length === 0) {
+    if (isLoading) {
         return (
             <div>Loading...</div>
         )
     } else {
         console.log(workout)
         return (
-            <div>{workout.Abs.Exercise}</div>
+            <div>{workout ? workout.Abs.Weight : ''}</div>
         )
     }
 }
