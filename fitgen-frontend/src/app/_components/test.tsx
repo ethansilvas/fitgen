@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react";
 type Exercise = {
     Exercise: string,
     Reps: number,
-    Weight: number
+    Weight: number,
+    Sets: number
 }
 
 type Workout = {
@@ -40,13 +41,30 @@ export default function Test() {
         console.log(workout)
         return (
             <div>
-                <ul>
-                    {
-                        Object.entries(workout).map(([key, item]) => (
-                            <li key={key}>{item.Exercise}</li>
-                        ))
-                    }
-                </ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Target Muscle</th>
+                            <th>Exercise</th>
+                            <th>Weight</th>
+                            <th>Reps</th>
+                            <th>Sets</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            Object.entries(workout).map(([key, value]) => (
+                                <tr key={key}>
+                                    <td>{key}</td>
+                                    <td>{value.Exercise}</td>
+                                    <td>{value.Weight}</td>
+                                    <td>{value.Reps}</td>
+                                    <td>{value.Sets}</td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
+                </table>
             </div>
         )
     }
