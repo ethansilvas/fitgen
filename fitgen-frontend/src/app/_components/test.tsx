@@ -19,7 +19,6 @@ type Workout = {
     "Lower Back": Exercise
 }
 
-
 export default function Test() {
     const [isLoading, setLoading] = useState(true)
     const [workout, setWorkout] = useState<Workout | null>(null)
@@ -37,10 +36,18 @@ export default function Test() {
         return (
             <div>Loading...</div>
         )
-    } else {
+    } else if (workout) {
         console.log(workout)
         return (
-            <div>{workout && workout["Lower Back"] ? workout["Lower Back"].Exercise : ''}</div>
+            <div>
+                <ul>
+                    {
+                        Object.entries(workout).map(([key, item]) => (
+                            <li key={key}>{item.Exercise}</li>
+                        ))
+                    }
+                </ul>
+            </div>
         )
     }
 }
