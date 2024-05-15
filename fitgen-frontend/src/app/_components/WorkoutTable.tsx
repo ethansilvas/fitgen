@@ -56,7 +56,13 @@ export default function WorkoutTable() {
                             Object.entries(workout).map(([targetMuscle, exercise]) => (
                                 <tr key={targetMuscle}>
                                     <td>{targetMuscle}</td>
-                                    <td>{exercise.Exercise}</td>
+                                    <td>
+                                        <select
+                                            value={exercise.Exercise}
+                                        >
+                                            <option value={exercise.Exercise}>{exercise.Exercise}</option>
+                                        </select>
+                                    </td>
                                     <td>{exercise.Weight}</td>
                                     <td>{exercise.Reps}</td>
                                     <td>{exercise.Sets}</td>
