@@ -8,7 +8,15 @@ type Exercise = {
 }
 
 type Workout = {
-    Abs: Exercise
+    Shoulders: Exercise,
+    Triceps: Exercise,
+    Quadriceps?: Exercise,
+    Hamstrings?: Exercise,
+    Biceps: Exercise,
+    Chest: Exercise,
+    Glutes: Exercise,
+    Abs: Exercise, 
+    "Lower Back": Exercise
 }
 
 
@@ -32,7 +40,7 @@ export default function Test() {
     } else {
         console.log(workout)
         return (
-            <div>{workout ? workout.Abs.Weight : ''}</div>
+            <div>{workout && workout["Lower Back"] ? workout["Lower Back"].Exercise : ''}</div>
         )
     }
 }
