@@ -20,7 +20,7 @@ type Workout = {
     "Lower Back": Exercise
 }
 
-export default function Test() {
+export default function WorkoutTable() {
     const [isLoading, setLoading] = useState(true)
     const [workout, setWorkout] = useState<Workout | null>(null)
 
