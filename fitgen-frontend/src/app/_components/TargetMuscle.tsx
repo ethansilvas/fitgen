@@ -11,8 +11,8 @@ export default function TargetMuscle({ defaultMuscle }: TargetMuscleProps) {
     useEffect(() => {
         fetch('http://localhost:8080/api/targetmuscles').then(
             response => response.json()
-        ).then((data) => {
-            setTargetMuscles(data)  
+        ).then((allTargetMuscles) => {
+            setTargetMuscles(allTargetMuscles)  
             setLoading(false)
         });
     }, [])
@@ -28,8 +28,8 @@ export default function TargetMuscle({ defaultMuscle }: TargetMuscleProps) {
             <select defaultValue={defaultMuscle}>
                 <option value={defaultMuscle}>{defaultMuscle}</option>
                 {
-                    Object.entries(targetMuscles).map(([key, value]) => (
-                        <option key={key}>Hi</option>
+                    Object.entries(targetMuscles).map(([muscle, exercises]) => (
+                        <option key={muscle}>{muscle}</option>
                     ))
                 }
             </select>
