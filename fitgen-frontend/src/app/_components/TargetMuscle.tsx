@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 
 interface TargetMuscleProps {
     defaultMuscle: string;
+    onMuscleChange: (muscle: []) => void;
 }
 
-export default function TargetMuscle({ defaultMuscle }: TargetMuscleProps) {
+export default function TargetMuscle({ defaultMuscle, onMuscleChange }: TargetMuscleProps) {
     const [isLoading, setLoading] = useState(true)
     const [targetMuscles, setTargetMuscles] = useState({})
 
@@ -17,6 +18,11 @@ export default function TargetMuscle({ defaultMuscle }: TargetMuscleProps) {
         });
     }, [])
 
+    const handleChange = (e) => {
+        console.log(targetMuscles[e.target.value])
+        onMuscleChange(targetMuscles[e.target.value])
+    }
+
     if (isLoading) {
         return (
             <select defaultValue={defaultMuscle}>
@@ -25,11 +31,11 @@ export default function TargetMuscle({ defaultMuscle }: TargetMuscleProps) {
         )
     } else {
         return (
-            <select defaultValue={defaultMuscle}>
+            <select defaultValue={defaultMuscle} onChange={handleChange}>
                 <option value={defaultMuscle}>{defaultMuscle}</option>
                 {
                     Object.entries(targetMuscles).map(([muscle, exercises]) => (
-                        <option key={muscle}>{muscle}</option>
+                        muscle != defaultMuscle ? <option key={muscle}>{muscle}</option> : null
                     ))
                 }
             </select>

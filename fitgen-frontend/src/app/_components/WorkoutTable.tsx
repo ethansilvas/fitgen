@@ -24,6 +24,7 @@ type Workout = {
 export default function WorkoutTable() {
     const [isLoading, setLoading] = useState(true)
     const [workout, setWorkout] = useState<Workout | null>(null)
+    const [selectedMuscleExercises, setSelectedMuscleExercises] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:8080/api/generate').then(
@@ -34,6 +35,10 @@ export default function WorkoutTable() {
         });
     }, []);
 
+    const handleMuscleChange = (muscle: []) => {
+        console.log(muscle)
+        setSelectedMuscleExercises(muscle);
+    }
 
     if (isLoading) {
         return (
@@ -58,14 +63,18 @@ export default function WorkoutTable() {
                             Object.entries(workout).map(([targetMuscle, exercise]) => (
                                 <tr key={targetMuscle}>
                                     <td>
-                                        <TargetMuscle defaultMuscle={targetMuscle}></TargetMuscle>
+                                        <TargetMuscle defaultMuscle={targetMuscle} onMuscleChange={handleMuscleChange}></TargetMuscle>
                                     </td>
                                     <td>
                                         <select
                                             defaultValue={exercise.Exercise}
                                         >
                                             <option value={exercise.Exercise}>{exercise.Exercise}</option>
-                                            <option value={'test'}>Test</option>
+                                            {
+                                                selectedMuscleExercises.map((exercise, index) => (
+                                                    <option key={exercise}>{exercise}</option>
+                                                ))
+                                            }
                                         </select>
                                     </td>
                                     <td>{exercise.Weight}</td>
